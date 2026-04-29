@@ -4,7 +4,6 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Singleton - Drawing Canvas
-# only one canvas should exist at a time, thats the whole point
 
 class Canvas:
     _instance = None
@@ -27,7 +26,6 @@ class Canvas:
 
 
 # Prototype - Shape base class
-# instead of creating shapes from scratch each time, we just clone them
 
 class Shape:
     def __init__(self, color):
@@ -70,7 +68,6 @@ class Triangle(Shape):
 
 
 # Factory - ShapeFactory
-# cleaner way to create shapes without hardcoding the class names everywhere
 
 class ShapeFactory:
     @staticmethod
